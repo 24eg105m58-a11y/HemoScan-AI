@@ -32,7 +32,14 @@ export function Login() {
       <div className="pointer-events-none absolute top-20 -right-10 h-72 w-72 rounded-full bg-teal-400/20 blur-3xl ai-float"></div>
       <div className="pointer-events-none absolute bottom-10 left-1/4 h-56 w-56 rounded-full bg-indigo-400/20 blur-3xl ai-float-fast"></div>
 
-      <main className="container mx-auto px-4 py-16">
+      <main className="container mx-auto px-4 py-12">
+        <button
+          type="button"
+          onClick={() => navigate("/")}
+          className="mb-6 inline-flex items-center gap-2 rounded-full px-4 py-2 text-5xl font-bold text-gray-900 transition-shadow hover:text-sky-600 hover:shadow-[0_10px_30px_rgba(14,165,233,0.25)]"
+        >
+          HemoScan-AI
+        </button>
         <div className="grid lg:grid-cols-2 gap-10 items-center max-w-6xl mx-auto">
           <div className="space-y-6 ai-fade-up">
             <div className="inline-flex items-center gap-2 text-blue-700 bg-blue-100/60 px-3 py-1.5 rounded-full text-sm font-medium">

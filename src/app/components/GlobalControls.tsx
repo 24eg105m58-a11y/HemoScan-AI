@@ -64,9 +64,9 @@ export function GlobalControls() {
   };
 
   return (
-    <div className="fixed top-4 right-4 z-40 flex flex-wrap items-center gap-2 rounded-2xl border border-slate-200 bg-white/90 px-3 py-2 shadow-lg backdrop-blur">
+    <div className="fixed top-3 right-4 z-40 flex flex-nowrap items-center gap-2 rounded-2xl border border-slate-200 bg-white/90 px-3 py-2 shadow-lg backdrop-blur">
       <select
-        className="rounded-lg border border-slate-200 bg-white px-2 py-1 text-xs"
+        className="h-9 rounded-full border border-slate-200 bg-white px-3 text-sm leading-none"
         value={region}
         onChange={(e) => handleRegion(e.target.value as RegionOption)}
       >
@@ -77,7 +77,7 @@ export function GlobalControls() {
         ))}
       </select>
       <select
-        className="rounded-lg border border-slate-200 bg-white px-2 py-1 text-xs"
+        className="h-9 rounded-full border border-slate-200 bg-white px-3 text-sm leading-none"
         value={language}
         onChange={(e) => handleLanguage(e.target.value as SupportedLanguage)}
       >
@@ -92,11 +92,18 @@ export function GlobalControls() {
         <div className="relative" ref={menuRef}>
           <Button
             size="sm"
+            className="h-9 rounded-full bg-blue-600 px-4 text-white hover:bg-blue-700 shadow-sm"
+            onClick={() => navigate("/dashboard")}
+          >
+            Dashboard
+          </Button>
+          <Button
+            size="sm"
             variant="outline"
+            className="h-9 w-9 rounded-full p-0"
             onClick={() => setMenuOpen((prev) => !prev)}
           >
-            <User className="w-4 h-4 mr-2" />
-            Profile
+            <User className="w-4 h-4" />
           </Button>
           {menuOpen && (
             <div className="absolute right-0 mt-2 w-60 rounded-md border border-slate-200 bg-white shadow-lg">
