@@ -1,0 +1,15 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import AppRoutes from "./app/routes";
+import { Toaster } from "./app/components/ui/sonner";
+import "./styles/index.css";
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <AppRoutes />
+      <Toaster />
+    </BrowserRouter>
+  </React.StrictMode>
+);
