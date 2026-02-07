@@ -91,5 +91,6 @@ python -m venv .venv
 ### Jon Snow
 Additional interface preview.
 
-![Jon Snow](docs/screenshots/jon%20snow.jpeg)
+![Jon Snow](docs/screenshots/jon-snow.jpeg)
+
 
